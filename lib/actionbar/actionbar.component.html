@@ -1,0 +1,31 @@
+<div fxLayout="row-reverse" fxLayoutAlign="start center" fxLayoutGap="8px" class="ng-actionbar">
+	<div *ngFor="let action of actions">
+		<div [ngSwitch]="action.type" class="ng-actionbar-element">
+			<md-input-container *ngSwitchCase="'type_search'">
+				<button md-icon-button *ngIf="!inputExpanded && vertical" (click)="expandInput()">
+					<md-icon class="material-icons">
+						{{ action.iconText }}
+					</md-icon>
+				</button>
+				<input *ngIf="!vertical || inputExpanded" mdInput [(ngModel)]="searchText" (keyup.enter)="action.action(searchText)" placeholder="{{action.text}}" />
+			</md-input-container>
+			<button md-button *ngSwitchCase="'type_button_text'" (click)="action.action()">
+				<span *ngIf="vertical" [ngClass]="{
+					'primary': action.style == 'ng-actionbar-style_primary',
+					'secondary': action.style == 'ng-actionbar-style_secondary',
+					'warning': action.style == 'ng-actionbar-style_warning'
+				}">
+				{{action.text}}
+				</span>
+				<md-icon class="material-icons">
+					{{ action.iconText }}
+				</md-icon>
+			</button>
+			<button md-icon-button *ngSwitchCase="'type_button_icon'" (click)="action.action()">
+				<md-icon class="material-icons">
+					{{action.text}}
+				</md-icon>
+			</button>
+		</div>
+	</div>
+</div>
