@@ -1,8 +1,8 @@
-import { ActionbarService } from '../actionbar.service';
+import { Action, ActionbarService } from '../actionbar.service';
 import { OnInit } from '@angular/core';
 import { OrientationService } from 'ng-orientation';
 export declare class ActionbarComponent implements OnInit {
-    private actions;
+    actions: Action[];
     searchText: string;
     vertical: boolean;
     private screenService;

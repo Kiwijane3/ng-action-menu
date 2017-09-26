@@ -10,7 +10,7 @@ import { OrientationService } from 'ng-orientation';
 })
 export class ActionbarComponent implements OnInit {
 
-	private actions: Action[];
+	public actions: Action[];
 
 	public searchText: string;
 

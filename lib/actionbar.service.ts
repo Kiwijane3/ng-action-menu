@@ -1,4 +1,4 @@
-import { Injectable, Component } from '@angular/core';
+import { Injectable } from '@angular/core';
 
 export module ActionConst {
 
@@ -24,7 +24,7 @@ export interface Action {
 	action: (parameter?: any) => void;
 }
 
-@Injectable() @Component({})
+@Injectable()
 export class ActionbarService {
 
 	public actions: Action[];
