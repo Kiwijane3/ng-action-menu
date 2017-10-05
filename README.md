@@ -1,6 +1,6 @@
 # About
 
-ng-action-menu is a library for Angular 4 that provides menu component that can be manipulated from code. It is designed to separate the menu from the page content, allowing simpler and more flexible layout. This library uses material design components.
+ng-action-menu is a library for Angular 4 that provides a flexible menu component that can be manipulated from code. It is designed to separate the menu from the page content, allowing simpler and more flexible layout. This library uses material design components.
 
 # Usage Guide
 
