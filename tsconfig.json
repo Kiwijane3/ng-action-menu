@@ -11,6 +11,7 @@
     "moduleResolution": "node",
     "removeComments": false,
     "sourceMap": true,
-    "declaration": true
+	"declaration": true,
+	"mapRoot": "./"
   }
 }
