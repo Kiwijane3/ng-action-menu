@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 export module ActionConst {
 
-	export const TYPE_SEARCH = "type_search";
+	export const TYPE_TEXT_INPUT = "type_text_input";
 
 	export const TYPE_BUTTON_TEXT = "type_button_text";
 

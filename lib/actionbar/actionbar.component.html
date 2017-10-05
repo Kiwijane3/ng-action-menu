@@ -1,7 +1,7 @@
 <div fxLayout="row-reverse" fxLayoutAlign="start center" fxLayoutGap="8px" class="ng-action-menu">
 	<div *ngFor="let action of actions">
 		<div [ngSwitch]="action.type" class="ng-action-menu-element">
-			<div *ngSwitchCase="'type_search'">
+			<div *ngSwitchCase="'type_text_input'">
 				<md-input-container *ngIf="!vertical || inputExpanded">
 					<input mdInput [(ngModel)]="searchText" (keyup.enter)="action.action(searchText)" placeholder="{{action.text}}" class="ng-action-menu-input-style"/>
 				</md-input-container>
